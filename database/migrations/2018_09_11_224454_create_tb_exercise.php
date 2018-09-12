@@ -15,10 +15,10 @@ class CreateTbExercise extends Migration
     {
         Schema::create('Tb_Exercise', function (Blueprint $table) {
             $table->increments('Id_Exercise');
-            $table->string('Name')->nullable(false)->change();
-            $table->char('BodyPart')->nullable(false)->change();
-            $table->text('Description')->nullable(false)->change();
-            $table->char('Status')->nullable(false)->change();
+            $table->string('Name')->nullable(false);
+            $table->char('BodyPart')->nullable(false);
+            $table->text('Description')->nullable(false);
+            $table->char('Status')->nullable(false);
         });
     }
 

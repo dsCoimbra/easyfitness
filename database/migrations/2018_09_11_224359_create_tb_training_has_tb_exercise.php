@@ -16,9 +16,9 @@ class CreateTbTrainingHasTbExercise extends Migration
         Schema::create('Tb_Training_has_Tb_Exercise', function (Blueprint $table) {
             $table->integer('Tb_Training_has_Tb_Training');
             $table->integer('Tb_Exercise_has_Tb_Exercise');
-            $table->integer('Secao', 5)->nullable(false)->change();
-            $table->integer('Repeticao', 5)->nullable(false)->change();
-            $table->decimal('Carga', 5,2)->nullable(false)->change();
+            $table->integer('Secao')->nullable(false);
+            $table->integer('Repeticao')->nullable(false);
+            $table->decimal('Carga', 5,2)->nullable(false);
         });
     }
 

@@ -14,13 +14,13 @@ class CreateTbEquipment extends Migration
     public function up()
     {
         Schema::create('Tb_Equipment', function (Blueprint $table) {
-            $table->increments('Id_Equipment')->nullable(false)->change();
-            $table->string('Name')->nullable(false)->change();
-            $table->string('Group')->nullable(false)->change();
-            $table->datetime('Installation')->nullable(false)->change();
-            $table->datetime('Support')->nullable(false)->change();
-            $table->integer('QttSupport')->nullable(false)->change();
-            $table->char('Status')->nullable(false)->change();
+            $table->increments('Id_Equipment');
+            $table->string('Name',15)->nullable(false);
+            $table->string('Group',15)->nullable(false);
+            $table->datetime('Installation')->nullable(false);
+            $table->datetime('Support')->nullable(false);
+            $table->integer('QttSupport')->nullable(false);
+            $table->char('Status', 1)->nullable(false);
         });
     }
 

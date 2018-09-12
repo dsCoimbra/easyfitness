@@ -15,13 +15,13 @@ class CreateTbPlan extends Migration
     {
         Schema::create('Tb_Plan', function (Blueprint $table) {
             $table->increments('Id_Plan');
-            $table->integer('Tb_Employee_Id_Employee', 5)->nullable(false)->change();
-            $table->string('Name', 20)->nullable(false)->change();
-            $table->char('Duration', 1)->nullable(false)->change();
-            $table->char('Status', 1)->nullable(false)->change();
-            $table->char('TypePayment', 1)->nullable(false)->change();
-            $table->dateTime('PayDay')->nullable(false)->change();
-            $table->text('Note')->nullable(false)->change();
+            $table->integer('Tb_Employee_Id_Employee')->nullable(false);
+            $table->string('Name', 20)->nullable(false);
+            $table->char('Duration', 1)->nullable(false);
+            $table->char('Status', 1)->nullable(false);
+            $table->char('TypePayment', 1)->nullable(false);
+            $table->dateTime('PayDay')->nullable(false);
+            $table->text('Note')->nullable(false);
         });
     }
 

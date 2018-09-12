@@ -15,9 +15,9 @@ class CreateTbPerformance extends Migration
     {
         Schema::create('Tb_Performance', function (Blueprint $table) {
             $table->increments('Id_Performance');
-            $table->integer('Tb_Student_Id_Student')->nullable(false)->change();
-            $table->decimal('Weight', 5,2)->nullable(false)->change();
-            $table->datetime('DatePerformance')->nullable(false)->change();
+            $table->integer('Tb_Student_Id_Student')->nullable(false);
+            $table->decimal('Weight', 5,2)->nullable(false);
+            $table->datetime('DatePerformance')->nullable(false);
         });
     }
 

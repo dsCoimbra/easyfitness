@@ -14,8 +14,15 @@ class CreateTbIndications extends Migration
     public function up()
     {
         Schema::create('Tb_Indications', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+            $table->increments('Id_Indications');
+            $table->integer('Tb_PhysicalAssessment_Id_PhysicalAssessment')->nullable(false);
+            $table->boolean('RML')->nullable(false);
+            $table->boolean('Aerobic')->nullable(false);
+            $table->boolean('Bodybuilding')->nullable(false);
+            $table->boolean('Medex')->nullable(false);
+            $table->boolean('Abdominal')->nullable(false);
+            $table->boolean('UpHill')->nullable(false);
+            $table->text('Comment')->nullable(false);
         });
     }
 
